@@ -5,6 +5,9 @@ This is a document of the tracking requirements for
 [**1. Ecommerce tracking**](#ecommerce-tracking) <br/>
 [1.1 Items array](#items-array) <br/>
 [1.2 Select Item](#select-item) <br/>
+[1.3 View Item](#view-item) <br/>
+[1.4 Add to cart](#add-to-cart) <br/>
+[1.5 View cart](#view-cart) <br/>
 
 ## Ecommerce tracking
 All ecommerce events and parameters are detailed in the following
@@ -47,10 +50,12 @@ items: [
 ## Select item
 Send event when user clicks on a product
 ````javascript
-window.datalayer.push({
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
   event: 'select_item',
-   ecommerce: {
-   items: [{ // insert items array with dynamic values   
+  ecommerce: {
+  items: [{ 
+            // insert items array with dynamic values   
           }]    
      }
 });
@@ -59,9 +64,12 @@ window.datalayer.push({
 ## View Item
 Send event when a user a loads a productpage 
 ````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
   event: 'view_item',
   ecommerce: {
-   items: [{ // insert items array with dynamic values   
+   items: [{ 
+            // insert items array with dynamic values   
           }]    
      }
 });
@@ -70,10 +78,13 @@ Send event when a user a loads a productpage
 ## Add to cart
 Send event when a user adds product to cart
 ````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
   event: 'add_to_cart',
   ecommerce: {
-  items: [{ // insert items array with dynamic values   
-          }]    
+  items: [{ 
+            // insert items array with dynamic values   
+         }]    
      }
 });  
 ````
@@ -81,10 +92,69 @@ Send event when a user adds product to cart
 ## View cart
 Send event when user views cart
 ````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
   event: 'view_cart',
   ecommerce: {
-  items: [{ // insert items array with dynamic values   
-          }]    
+  items: [{ 
+            // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## Remove from cart
+Send event when user removes product from cart (all carts) 
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'remove_from_cart',
+  ecommerce: {
+  items: [{ 
+           // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## Begin checkout
+Send event when user starts checkout flow
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'begin_checkout',
+  ecommerce: {
+  items: [{ 
+           // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## Add shipping info
+Send event when user has successlfully added shipping info 
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'add_shipping_info',
+  ecommerce: {
+  items: [{ 
+           // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## Add payment info 
+Send event when user has successfully added payment info
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'add_payment_info',
+    payment_type: "creditcard" // eller FF (forbrugsforeningenskort) 
+      items: [{ 
+           // insert items array with dynamic values   
+         }]    
      }
 });
 ````
