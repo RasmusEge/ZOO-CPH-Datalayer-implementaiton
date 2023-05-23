@@ -2,7 +2,7 @@
 This is a document of the tracking requirements for
 
 ## Table of content
-[**1. Ecommerce**](#ecommerce-tracking) <br/>
+[**1. Ecommerce tracking**](#ecommerce-tracking) <br/>
 [1.1 Items array](#items-array) <br/>
 [1.2 Select Item](#select-item) <br/>
 
