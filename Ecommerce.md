@@ -170,7 +170,7 @@ window.dataLayer.push({
 ````
 
 ## Purchase 
-Send event when user has successfully added made a purchase
+Send event when user has successfully made a purchase
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
