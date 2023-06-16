@@ -24,7 +24,7 @@ checkout 2 - with a zoo-card in the basket
 Google documentation: [https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag)
 
 ## Items array
-Items array is used throughout all ecommerce events and includes all items in a purchase for both chekout 1 and 2    
+#### Items array is used throughout all ecommerce events and includes all items in a purchase for both chekout 1 and 2    
 ````javascript
 items: [
     {
@@ -74,10 +74,9 @@ items: [
 ]
 ````
 
-
 ## Select item
+#### Send event when user clicks on a product
 
-Send event when user clicks on a product
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/3eacf1db-9a68-4ead-be29-52068b40b075)
 
 ````javascript
@@ -94,7 +93,8 @@ window.dataLayer.push({
 
 ## View Item
 
-Send event when a user a loads a productpage 
+#### Send event when a user a loads a productpage
+
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/93581eb9-6bc7-41ca-a74c-c13800c7e643)
 
 ````javascript
@@ -110,7 +110,8 @@ window.dataLayer.push({
 ````
 
 ## Add to cart
-Send event when a user succesfully adds product to cart
+#### Send event when a user succesfully adds product to cart
+
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/1ace11b2-1529-4b09-beb8-7e3f025b7b7f)
 
 ````javascript
@@ -126,7 +127,8 @@ window.dataLayer.push({
 ````
 
 ## View cart
-Send event when user views cart
+#### Send event when user views cart
+
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/22793fc5-bf2a-4111-a4c8-bd9ce2698828)
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/e34ce553-9a61-49b2-8007-bad7f5458b93)
 
@@ -143,7 +145,8 @@ window.dataLayer.push({
 ````
 
 ## Remove from cart
-Send event when user removes product from cart
+#### Send event when user removes product from cart
+
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/b27d2317-bc44-4b80-b9d1-59d5a0d7a8cd)
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/5afcf372-e860-401e-86fd-4ad120550bfb)
 
@@ -160,7 +163,8 @@ window.dataLayer.push({
 ````
 
 ## Begin checkout
-Send event when user starts checkout flow
+#### Send event when user starts checkout flow
+
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/4aaaf1dc-7fd0-43e9-843c-d0140a0b70dc)
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/fa4c5f61-c94d-4208-b799-0cff874914ef)
 
@@ -177,7 +181,8 @@ window.dataLayer.push({
 ````
 
 ## Add shipping info
-Send event when user has successlfully added shipping info 
+#### Send event when user has successlfully added shipping info 
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
