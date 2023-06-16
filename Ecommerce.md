@@ -77,6 +77,8 @@ items: [
 ## Select item
 
 Send event when user clicks on a product
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/3eacf1db-9a68-4ead-be29-52068b40b075)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
