@@ -92,7 +92,10 @@ window.dataLayer.push({
 ````
 
 ## View Item
+
 Send event when a user a loads a productpage 
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/93581eb9-6bc7-41ca-a74c-c13800c7e643)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -106,7 +109,9 @@ window.dataLayer.push({
 ````
 
 ## Add to cart
-Send event when a user adds product to cart
+Send event when a user succesfully adds product to cart
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/1ace11b2-1529-4b09-beb8-7e3f025b7b7f)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -121,6 +126,9 @@ window.dataLayer.push({
 
 ## View cart
 Send event when user views cart
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/22793fc5-bf2a-4111-a4c8-bd9ce2698828)
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/e34ce553-9a61-49b2-8007-bad7f5458b93)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
