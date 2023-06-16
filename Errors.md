@@ -1,6 +1,24 @@
 # Copenhagen ZOO tracking requirement document (WEB) - Errors
 This document contains tracking requirements for error events for https://www.zoo.dk/
 
+## Table of content
+[**1. Error tracking**](#error-tracking) <br/>
+[1.1 Items array](#items-array) <br/>
+[1.2 Select Item](#select-item) <br/>
+[1.3 View Item](#view-item) <br/>
+[1.4 Add to cart](#add-to-cart) <br/>
+[1.5 View cart](#view-cart) <br/>
+[1.6 Remove from cart](#remove-from-cart) <br/>
+[1.7 Add Shipping info](#add-shipping-info) <br/>
+[1.8 Add Payment info](#add-payment-info) <br/>
+[1.9 Purchase](#purchase) <br/>
+
+
+## Error tracking
+All error events and parameters are detailed in the following
+
+Google documentation:
+
 
 Form-related errors (like “some required fields are not filled in: first name, address”)
 
