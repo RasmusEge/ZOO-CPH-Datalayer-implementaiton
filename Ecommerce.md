@@ -74,6 +74,7 @@ items: [
 ]
 ````
 
+
 ## Select item
 
 Send event when user clicks on a product
