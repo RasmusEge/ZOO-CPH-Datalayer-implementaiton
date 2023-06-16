@@ -4,33 +4,74 @@ This document contains tracking requirements for error events for https://www.zo
 ## Table of content
 [**1. Error tracking**](#error-tracking) <br/>
 [1.1 Form errors](#form-errors) <br/>
-[1.2 Select Item](#select-item) <br/>
-[1.3 View Item](#view-item) <br/>
-[1.4 Add to cart](#add-to-cart) <br/>
-[1.5 View cart](#view-cart) <br/>
-[1.6 Remove from cart](#remove-from-cart) <br/>
-[1.7 Add Shipping info](#add-shipping-info) <br/>
-[1.8 Add Payment info](#add-payment-info) <br/>
-[1.9 Purchase](#purchase) <br/>
+
 
 
 ## Error tracking
 All error events and parameters are detailed in the following
 
-Documentation:
+Documentation: https://www.analyticsmania.com/post/tracking-errors-with-google-tag-manager/#checkout-errors
 
-##Form errors
-When user sees form in browser
+## Form errors
+When eroor occours with Registration, login, signup (newsletter), booking forms, contact and d subscription forms
 
-a.	 (Registration, login, signup (newsletter) and booking forms)
-i.	Specify error type 
-ii.	Specify error message 
-iii.	Specify form name 
-iv.	Specify which field throws an error 
-v.	Specify form location (page-path)
-b.	Page errors  (fx 404)
-i.	Specify error type 
-ii.	Specify error message 
+````javascript
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'error',
+  'formType': 'booking' // this value should depends on the type of form, e.g Registration, contact etc. 
+  'formID':  214521 // some ID
+  'errorType': 'form error', // this value should depends on the type of error, e.g. form error, checkout error, etc.
+  'formField' 'email' some descriptive value about the error
+  'formLocation' 'body' // should specify either header body or footer  
+  'errorMessage' : 'email not valid' // some descriptive message about the error
+});
+</script>
+````
+
+## Page errors
+When error occours with Page load 
+
+````javascript
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'error',
+  'errorType': 'page error', // this value should depends on the type of error, e.g. form error, checkout error, etc.
+  'errorMessage' : '404 - SIDEN KUNNE IKKE FINDES' // some descriptive message about the error
+});
+</script>
+````
+
+## Server errors
+When error occours with server response 
+
+````javascript
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'error',
+  'errorType': 'server error', // this value should depends on the type of error, e.g. form error, checkout error, etc.
+  'errorMessage' : '503 - the server is not ready to handle the request.' // some descriptive message about the error
+});
+</script>
+````
+
+## Server errors
+When error occours with checkout flow  
+
+````javascript
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'error',
+  'errorType': 'checkout error', // this value should depends on the type of error, e.g. form error, checkout error, etc.
+  'errorMessage' : 'payment delined' // some descriptive message about the error eg. payment cancelled,  
+});
+</script>
+````
+
 c.	Checkout errors 
 i.	Specify error type 
 ii.	Specify error message (fx card declined)
