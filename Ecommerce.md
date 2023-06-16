@@ -142,7 +142,10 @@ window.dataLayer.push({
 ````
 
 ## Remove from cart
-Send event when user removes product from cart  
+Send event when user removes product from cart
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/b27d2317-bc44-4b80-b9d1-59d5a0d7a8cd)
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/5afcf372-e860-401e-86fd-4ad120550bfb)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -157,6 +160,9 @@ window.dataLayer.push({
 
 ## Begin checkout
 Send event when user starts checkout flow
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/4aaaf1dc-7fd0-43e9-843c-d0140a0b70dc)
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/fa4c5f61-c94d-4208-b799-0cff874914ef)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
