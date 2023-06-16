@@ -4,7 +4,9 @@ This document contains tracking requirements for error events for https://www.zo
 ## Table of content
 [**1. Error tracking**](#error-tracking) <br/>
 [1.1 Form errors](#form-errors) <br/>
-
+[1.2 Page errors](#page-errors) <br/>
+[1.3 Server errors](#server-errors) <br/>
+[1.4 Checkout errors](#checkout-errors) <br/>
 
 
 ## Error tracking
@@ -58,7 +60,7 @@ window.dataLayer.push({
 </script>
 ````
 
-## Server errors
+##  Checkout errors
 When error occours with checkout flow  
 
 ````javascript
