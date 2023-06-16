@@ -1,3 +1,7 @@
+# Copenhagen ZOO tracking requirement document (WEB) - Errors
+This document contains tracking requirements for error events for https://www.zoo.dk/
+
+
 Form-related errors (like “some required fields are not filled in: first name, address”)
 
 Form-field-related errors (like “invalid shipping address”)
