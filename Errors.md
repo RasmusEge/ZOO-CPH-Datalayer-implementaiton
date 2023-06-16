@@ -3,7 +3,7 @@ This document contains tracking requirements for error events for https://www.zo
 
 ## Table of content
 [**1. Error tracking**](#error-tracking) <br/>
-[1.1 Items array](#items-array) <br/>
+[1.1 Form view](#form-view) <br/>
 [1.2 Select Item](#select-item) <br/>
 [1.3 View Item](#view-item) <br/>
 [1.4 Add to cart](#add-to-cart) <br/>
@@ -17,8 +17,27 @@ This document contains tracking requirements for error events for https://www.zo
 ## Error tracking
 All error events and parameters are detailed in the following
 
-Google documentation:
+Documentation:
 
+##Form view 
+When user sees form in browser
+
+
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
+b.	Form start (User starts filling out form 
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
+c.	Form submit (user submit form)
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
+d.	Form success (form is successfully submitted)
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
 
 Form-related errors (like “some required fields are not filled in: first name, address”)
 
