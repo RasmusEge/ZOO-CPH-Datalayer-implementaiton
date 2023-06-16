@@ -17,12 +17,12 @@ This document contains datalayer tracking requirements for ecommerce events on h
 
 
 ## Ecommerce tracking
-All ecommerce events and parameters are detailed in the following
+Detailed below are all ecommerce events and parameters for checkout 1 - without zoo card in the basket and checkout 2 - with a  zoo card in the basket
 
 Google documentation: [https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag)
 
 ## Items array
-Items array is used throughout all ecommerce events   
+Items array is used throughout all ecommerce events and includes all items in a purchase    
 ````javascript
 items: [
     {
@@ -32,10 +32,8 @@ items: [
       coupon: "Sommmer_sjov20",
       discount: 100,
       index: 0,
-      item_brand: "CPH",
       item_category: "ZOO-Kort",
       item_category2: "Voksen",
-      item_variant: "ZOO-Kort",
       price: 500.00,
       quantity: 2
     },
@@ -46,10 +44,8 @@ items: [
       coupon: "Sommmer_sjov20",
       discount: 100,
       index: 1,
-      item_brand: "CPH-ZOO",
-      item_category: "ZOO-Kort",
-      item_category2: "Voksen",
-      item_variant: "ZOO-Kort",
+      item_category: "ZOO-billet",
+      item_category2: "Barn",
       price: 200.00,
       quantity: 2
     }
