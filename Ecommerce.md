@@ -1,5 +1,5 @@
 # Copenhagen ZOO tracking requirement document (WEB) Ecommerce 
-This is a document of the tracking requirements for
+This document contains datalayer tracking requirements for ecommerce events on https://www.zoo.dk/
 
 
 ## Table of content
