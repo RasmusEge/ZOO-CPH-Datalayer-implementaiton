@@ -42,7 +42,6 @@ items: [
     {
       item_id: "SKU_12345",
       item_name: "Billet_barn",
-      affiliation: "CPH ZOO",
       coupon: "Sommmer_sjov20",
       discount: 100,
       index: 1,
@@ -51,10 +50,32 @@ items: [
       price: 200.00,
       quantity: 2
     }
+     {
+      item_id: "SKU_123456", // Id from backend 
+      item_name: "Boerne-foeselsdag", // name from backend 
+      discount: 500,
+      index: 2,
+      item_category: "ZOO-event",
+      item_category2: "Barn",
+      price: 275.00,
+      quantity: 12
+    }
+         {
+      item_id: "SKU_12345343", // Id from backend 
+      item_name: "ZOO-camp 3 dage 10-12 aar", // name from backend 
+      discount: 500,
+      index: 3,
+      item_category: "ZOO-event",
+      item_category2: "Barn",
+      price: 275.00,
+      quantity: 12
+    }
+
 ]
 ````
 
 ## Select item
+
 Send event when user clicks on a product
 ````javascript
 window.dataLayer = window.dataLayer || [];
