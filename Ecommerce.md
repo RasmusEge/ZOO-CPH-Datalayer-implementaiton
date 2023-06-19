@@ -10,7 +10,7 @@ This document contains datalayer tracking requirements for ecommerce events on h
 [1.4 Add to cart](#add-to-cart) <br/>
 [1.5 View cart](#view-cart) <br/>
 [1.6 Remove from cart](#remove-from-cart) <br/>
-[1.7 Add Shipping info](#add-shipping-info) <br/>
+[1.7 Add Contact info](#add-contact-info) <br/>
 [1.8 Add Payment info](#add-payment-info) <br/>
 [1.9 Purchase](#purchase) <br/>
 
@@ -32,13 +32,16 @@ items: [
       item_name: "ZOO-kort_voksen",
       affiliation: "CPH-ZOO",
       coupon: "Sommmer_sjov20",
-      discount: 100,
+      discount: 100, // The discount per item
       index: 0,
       item_category: "ZOO-Kort",
       item_category2: "Voksen",
-      price: 500.00,
+      price: 500.00, // The sale price is the per item list price (600.00) minus discount (100.00)
       quantity: 2
     },
+    discount: 2.00, // The discount per item
+      price: 4.00, // The sale price is the per item list price (6.00) minus discount (2.00)
+      quantity: 3 // The number of items sold
     {
       item_id: "SKU_12345",
       item_name: "Billet_barn",
@@ -180,13 +183,66 @@ window.dataLayer.push({
 });
 ````
 
-## Add shipping info
-#### Send event when user has successlfully added shipping info 
+## Add contact info
+#### Send event when user has successlfully added contact info 
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/625787b1-5d43-4194-bdce-80738f875835)
 
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  event: 'add_shipping_info',
+  event: 'add_contact_info',
+  ecommerce: {
+  items: [{ 
+           // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## Add ZOO-event info
+#### Send event when user has successlfully added all Zoo-event info 
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/9404f23f-8444-4cff-8c35-4dfb75590be1)
+
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'add_zoo-event_info',
+  ecommerce: {
+  items: [{ 
+           // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## Add ZOO-card info 
+#### Send event when user has successlfully added all Zoo-event info 
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/95109b40-c32d-49ba-959f-d38c9253aaf2)
+
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'add_zoo-card_info',
+  ecommerce: {
+  items: [{ 
+           // insert items array with dynamic values   
+         }]    
+     }
+});
+````
+
+## All info addded
+#### Send event when user has successlfully added all info in all checkout forms exept for payment info
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/95109b40-c32d-49ba-959f-d38c9253aaf2)
+
+````javascript
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: 'add_all-info',
   ecommerce: {
   items: [{ 
            // insert items array with dynamic values   
@@ -196,7 +252,10 @@ window.dataLayer.push({
 ````
 
 ## Add payment info 
-Send event when user has successfully added payment info
+#### Send event when user has successfully added payment info
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/c602a7e6-4196-431d-a6fb-2ca7d1c9423c)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -212,6 +271,9 @@ window.dataLayer.push({
 
 ## Purchase 
 Send event when user has successfully made a purchase
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/58c261b5-5b1c-453c-981f-035946b60aa0)
+
 ````javascript
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -222,10 +284,18 @@ window.dataLayer.push({
     tax: 7.18,
     shipping: 10.00
     transaction_id: 'p115-20202000',
-    coupon: 'free_back_rub', //if
-      items: [{ 
-           // insert items array with dynamic values   
-         }]    
+    coupon: 'gavekort', // if there
+      items: [{      
+        item_id: "SKU_12345",
+        item_name: "ZOO-kort_voksen",
+        coupon: "gavekort",
+        discount: 100, // The discount per item
+        index: 0,
+        item_category: "ZOO-Kort",
+        item_category2: "Voksen",
+        price: 500.00, // The sale price is the per item list price (600.00) minus discount (100.00)
+        quantity: 2 // The number of items sold
+        }]    
      }
 });
 ````
