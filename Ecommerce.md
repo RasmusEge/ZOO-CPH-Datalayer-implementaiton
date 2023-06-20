@@ -39,9 +39,7 @@ items: [
       price: 500.00, // The sale price is the per item list price (600.00) minus discount (100.00)
       quantity: 2
     },
-    discount: 2.00, // The discount per item
-      price: 4.00, // The sale price is the per item list price (6.00) minus discount (2.00)
-      quantity: 3 // The number of items sold
+   
     {
       item_id: "SKU_12345",
       item_name: "Billet_barn",
