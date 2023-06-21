@@ -10,12 +10,13 @@ This document contains datalayer tracking requirements for ecommerce events on h
 [1.4 Add to cart](#add-to-cart) <br/>
 [1.5 View cart](#view-cart) <br/>
 [1.6 Remove from cart](#remove-from-cart) <br/>
-[1.7 Add Contact info](#add-contact-info) <br/>
-[1.8 Add ZOO-event info](#add-zoo-event-info) <br/>
-[1.9 Add ZOO-card info](#add-zoo-card-info) <br/>
-[1.9 Add All info](#all-info-added) <br/>
-[1.11 Add Payment info](#add-payment-info) <br/>
-[1.12 Purchase](#purchase) <br/>
+[1.7 Begin checkout](#begin-checkout) <br/>
+[1.8 Add Contact info](#add-contact-info) <br/>
+[1.9 Add ZOO-event info](#add-zoo-event-info) <br/>
+[1.10 Add ZOO-card info](#add-zoo-card-info) <br/>
+[1.11 Add All info](#all-info-added) <br/>
+[1.12 Add Payment info](#add-payment-info) <br/>
+[1.13 Purchase](#purchase) <br/>
 
 
 
