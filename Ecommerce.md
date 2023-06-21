@@ -13,7 +13,7 @@ This document contains datalayer tracking requirements for ecommerce events on h
 [1.7 Add Contact info](#add-contact-info) <br/>
 [1.8 Add ZOO-event info](#add-zoo-event-info) <br/>
 [1.9 Add ZOO-card info](#add-zoo-card-info) <br/>
-[1.9 Add All info](#add-all-info) <br/>
+[1.9 Add All info](#all-info-added) <br/>
 [1.11 Add Payment info](#add-payment-info) <br/>
 [1.12 Purchase](#purchase) <br/>
 
@@ -235,7 +235,7 @@ window.dataLayer.push({
 });
 ````
 
-## All info addded
+## All info added
 #### Send event when user has successlfully added all info in all checkout forms exept for payment info
 
 ![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/95109b40-c32d-49ba-959f-d38c9253aaf2)
