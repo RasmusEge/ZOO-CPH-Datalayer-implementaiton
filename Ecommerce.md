@@ -11,10 +11,10 @@ This document contains datalayer tracking requirements for ecommerce events on h
 [1.5 View cart](#view-cart) <br/>
 [1.6 Remove from cart](#remove-from-cart) <br/>
 [1.7 Begin checkout](#begin-checkout) <br/>
-[1.8 Add Contact info](#add-contact-info) <br/>
-[1.9 Add ZOO-event info](#add-zoo-event-info) <br/>
-[1.10 Add ZOO-card info](#add-zoo-card-info) <br/>
-[1.11 Add All info](#all-info-added) <br/>
+[1.8 Add Contact info](#add-contact-info) *<br/>
+[1.9 Add ZOO-event info](#add-zoo-event-info) *<br/>
+[1.10 Add ZOO-card info](#add-zoo-card-info) *<br/>
+[1.11 Add All info](#all-info-added) *<br/>
 [1.12 Add Payment info](#add-payment-info) <br/>
 [1.13 Purchase](#purchase) <br/>
 
@@ -24,6 +24,8 @@ This document contains datalayer tracking requirements for ecommerce events on h
 Detailed below are all ecommerce events and parameters for
 checkout 1 - without zoo-card in the basket
 checkout 2 - with a zoo-card in the basket
+
+* Not sure the google API will accept these as ecommerce events, as they are custom and fall outside of the google analytics Ecommerce recommended event naming schema. If it isn't possible to collect these events in the ecommerce API, they should be sent as From_tracking events instead [https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/blob/main/Form_tracking] 
 
 Google documentation: [https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtag)
 
