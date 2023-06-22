@@ -213,6 +213,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   event: 'add_zoo-event_info',
+  zoo-event: 'boernefoedselsdag, ZOO camp' // incert dynamic varible(s)
   ecommerce: {
   items: [{ 
            // insert items array with dynamic values   
