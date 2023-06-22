@@ -4,8 +4,9 @@ This document contains tracking requirements for form events for https://www.zoo
 ## Table of content
 [**1. Form tracking**](#error-tracking) <br/>
 [1.1 Form views](#form-view) <br/>
-
-
+[1.2 Form start](#form-start) <br/>
+[1.3 Form submit](#form-submit) <br/>
+[1.4 Form success](#form-success) <br/>
 
 ## Form tracking
 All error events and parameters are detailed in the following
@@ -26,16 +27,52 @@ window.dataLayer.push({
  
 ````
 
+## Form start
+#### When users start filling out forms  
 
-b.	Form start (User starts filling out form 
-i.	Specify form name 
-ii.	Specify form location (page-path)
-iii.	Specify form ID 
-c.	Form submit (user submit form)
-i.	Specify form name 
-ii.	Specify form location (page-path)
-iii.	Specify form ID 
-d.	Form success (form is successfully submitted)
-i.	Specify form name 
-ii.	Specify form location (page-path)
-iii.	Specify form ID 
+````javascript
+
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'event': 'Form start',
+ 'formLocation': 'footer' // or content blok (if something exists)
+ 'formType': 'Booking' // incert dynamic value 
+ 'formName':'Booking - Selskaber' // incert dynamic value
+ 'formID': '12343535' //  incert dynamic value
+ });
+ 
+````
+
+## Form submit
+#### When users submit forms  
+
+````javascript
+
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'event': 'Form submit',
+ 'formLocation': 'footer' // or content blok (if something exists)
+ 'formType': 'Booking' // incert dynamic value 
+ 'formName':'Booking - Selskaber' // incert dynamic value
+ 'formID': '12343535' //  incert dynamic value
+ });
+ 
+````
+
+## Form success
+#### When users submit forms  
+
+````javascript
+
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'event': 'Form success',
+ 'formLocation': 'footer' // or content blok (if something exists)
+ 'formType': 'Booking' // incert dynamic value 
+ 'formName':'Booking - Selskaber' // incert dynamic value
+ 'formID': '12343535' //  incert dynamic value
+ });
+ 
+````
+
+
