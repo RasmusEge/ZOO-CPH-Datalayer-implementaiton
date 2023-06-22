@@ -12,11 +12,31 @@ This document contains tracking requirements for form events for https://www.zoo
 ## Form tracking
 All error events and parameters are detailed in the following
 
+## Form view
+#### When users views a form in the browser    
 
-<script>
+````javascript
+
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
  'event': 'new_subscriber',
  'formLocation': 'footer'
  });
-</script>
+````
+
+a.	Form view (user sees form in browser)
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
+b.	Form start (User starts filling out form 
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
+c.	Form submit (user submit form)
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
+d.	Form success (form is successfully submitted)
+i.	Specify form name 
+ii.	Specify form location (page-path)
+iii.	Specify form ID 
