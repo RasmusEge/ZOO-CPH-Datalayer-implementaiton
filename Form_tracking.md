@@ -4,9 +4,7 @@ This document contains tracking requirements for form events for https://www.zoo
 ## Table of content
 [**1. Form tracking**](#error-tracking) <br/>
 [1.1 Form views](#form-view) <br/>
-[1.2 Page errors](#page-errors) <br/>
-[1.3 Server errors](#server-errors) <br/>
-[1.4 Checkout errors](#checkout-errors) <br/>
+
 
 
 ## Form tracking
@@ -19,15 +17,16 @@ All error events and parameters are detailed in the following
 
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
- 'event': 'new_subscriber',
- 'formLocation': 'footer'
+ 'event': 'Form view',
+ 'formLocation': 'footer' // or content blok (if something exists)
+ 'formType': 'Booking' // incert dynamic value 
+ 'formName':'Booking - Selskaber' // incert dynamic value
+ 'formID': '12343535' //  incert dynamic value
  });
+ 
 ````
 
-a.	Form view (user sees form in browser)
-i.	Specify form name 
-ii.	Specify form location (page-path)
-iii.	Specify form ID 
+
 b.	Form start (User starts filling out form 
 i.	Specify form name 
 ii.	Specify form location (page-path)
