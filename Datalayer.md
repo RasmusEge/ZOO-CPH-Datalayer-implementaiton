@@ -9,14 +9,15 @@ Adding data to a data layer is the equivalent of initiating an array with data o
 1. Initialize the data layer
 To set up your data layer, you need to add the following code snippet to the head section of the page – before the GTM snippet. 
 The snippet must be implemented across all pages you you want Google Tag Manager to run on (mostly the entire domain).
-....javascript
+
+````javascript
 <script>
    window.dataLayer = window.dataLayer || [];
    window.dataLayer = [{
      ... // data for initialization. More about this later.
    }]; 
 </script>
-
+````
 It is important that the array is defined before the GTM library is loaded - hence the implementation before the GTM script tag in the head. 
 Example: Data layer implemented on a web page
 The correct hierarchical order of implementation looks as follows:
