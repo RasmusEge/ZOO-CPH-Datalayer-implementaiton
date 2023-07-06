@@ -1,4 +1,4 @@
-*** Data Layer Implementation: 
+## GTM Implementation: 
 
 Developer instructions to implement Google Tag Manager across all pages
 GTM container tag implementation guide
@@ -26,15 +26,19 @@ If you have any troubles implementing the data layer in the head section
 
 
 
-Data Layer Implementation: 
+## Data Layer Implementation: 
 
 To ensure maximum flexibility, portability, and ease of implementation, Google Tag Manager functions best when deployed alongside a data layer.
 A data layer is an array in the global scope across the website. It contains and passes all the information we want to use in Google Tag Manager.
-There are 2 ways to add data to the data layer:
-You initialize the data layer at page load
-You push data to the data layer at any other time
-Adding data to a data layer is the equivalent of initiating an array with data or adding data to it via its push method. Let's take a closer look at each way.
-1. Initialize the data layer
+
+There are **2 ways** to add data to the data layer:
+
+1. You initialize the data layer at page load
+2. You push data to the data layer at any other time
+
+Adding data to a data layer is the equivalent of initiating an array with data or adding data to it via its push method.
+
+### 1. Initialize the data layer
 To set up your data layer, you need to add the following code snippet to the head section of the page – before the GTM snippet. 
 The snippet must be implemented across all pages you you want Google Tag Manager to run on (mostly the entire domain).
 
@@ -46,9 +50,8 @@ The snippet must be implemented across all pages you you want Google Tag Manager
    }]; 
 </script>
 ````
-It is important that the array is defined before the GTM library is loaded - hence the implementation before the GTM script tag in the head. 
-Example: Data layer implemented on a web page
-The correct hierarchical order of implementation looks as follows:
+**It is important that the array is defined before the GTM library is loaded - hence the implementation before the GTM script tag in the head.**
+> Example: Data layer implemented on a web page. The correct hierarchical order of implementation looks as follows:
 
 ````javascript
 <head>
@@ -70,26 +73,32 @@ The correct hierarchical order of implementation looks as follows:
 </body>
 ````
 
-Push data to the data layer
+### Push data to the data layer
 There are 2 ways to add data to the data layer:
 At page load, via data layer "initiation" (above example)
 After page load, with a data layer push
 Adding data to a data layer is the equivalent of initiating an array with data or adding data to it via its push method.
 As in the previous example, the push method uses JSON comma-separated pairs (Format: 'name': 'value'):
-
+````javascript
    dataLayer.push({
       'variable-name': 'variable-value' // key and value are both in quotes
    });
-   
-Push multiple variables together
+````
+### Push multiple variables together
 Instead of using the data layer push method for each variable, just like when initializing the data layer; you can push multiple variables to the data layer:
+
+````javascript
 dataLayer.push({
       'eventCategory': 'variable-value',
       'eventAction': 'variable-value',
       'eventLabel': 'variable-value',
       'event': 'send-ga-event'
    });
-Example: Data layer push as an onClick event
+````  
+
+> Example: Data layer push as an onClick event
+
+````javascript
 <a 
    href="#" 
    target="_blank"
@@ -100,7 +109,13 @@ Example: Data layer push as an onClick event
       'event': 'send-ga-event'
    });"
    >Test</a>
-Full Example with initiation and push
+````  
+
+
+> Full Example with initiation and push
+
+````javascript
+
 <head>
   <!-- Datalayer initiation -->
   <script>
@@ -135,15 +150,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
   <!-- End Datalayer push -->
 </body>
+````
 ​
-​
-Common pitfalls
+### Common pitfalls
 When implementing the data layer, keep the following in mind:
+
 The dataLayer object name is case-sensitive
 When referencing the data layer you must use the proper casing used when declaring the data layer.
+
+````javascript
 Datalayer.push({'variable-name': 'variable-value'});        //Not OK
+````
+
+````javascript
 dataLayer.push({'variable-name': 'variable-value'});        //OK
+````
 Variable names must always be enclosed in quotes
 To avoid any issues it is recommended that all keys and values are enclosed in quotes.
-dataLayer.push({variable-name: 'variable-value'});        //Not OKJA
+
+````javascript
+dataLayer.push({variable-name: 'variable-value'});        //Not OK
+````
+
+````javascript
 dataLayer.push({'variable-name': 'variable-value'});        //OK
+````
+
