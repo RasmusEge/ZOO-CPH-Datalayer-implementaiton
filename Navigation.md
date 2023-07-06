@@ -15,6 +15,11 @@ dataLayer.push({
  }); 
 ````
 
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/8cd5cb1d-3ec7-4d3e-99eb-83ba876ce084)
+
+
+
 ### Top Navigation - submenu 1 
 When the user clicks a menu item in the top navigation dropdown-menu submenu_1 (see image below), the following event should be dispatched:
 
