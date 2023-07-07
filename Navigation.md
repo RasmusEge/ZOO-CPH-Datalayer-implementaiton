@@ -61,3 +61,16 @@ dataLayer.push({
      eventLabel: '[Menu item name]'
  }); 
 ````
+
+### Footer Navigation
+When the user clicks a menu item in the footer navigation bar (see image below), the following event should be dispatched:
+
+![image](https://github.com/RasmusEge/ZOO-CPH-Datalayer-implementaiton/assets/122262884/16d79140-8804-41af-9fb7-05e50ebb6ccb)
+````javascript
+dataLayer.push({
+     event: 'navigationTracking'
+     eventCategory: 'Navigation',
+     eventAction: 'Footer',
+     eventLabel: '[Menu item name]'
+ });
+````
